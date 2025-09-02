@@ -1,0 +1,22 @@
+{
+	"projectNameInput": "Please enter project name",
+	"projectNameCancelInput": "Cancel input",
+	"projectNameErrorPath": "Invalid directory path",
+	"projectNameErrorName": "Only valid project names with letters, numbers, dashes, or underscores are supported",
+	"projectNameErrorExists": "Target path already exists, please re-enter",
+	"projectTemplateSelect": "Please select template",
+	"projectNameCancelSelect": "Cancel select",
+	"templateNormal": "Default - Lithe Admin",
+	"templateNormalHint": "Default template",
+	"templateLite": "Lite - Lithe Admin Lite",
+	"templateLiteHint": "Without routes, only basic page structures",
+	"templateLinkError": "Template link not found",
+	"templateDownloadStart": "Start downloading",
+	"templateDownloadErrorTryAgain": "Download error, retrying",
+	"templateDownloadErrorSwitchProxy": "Download error, switching to other address",
+	"templateDownloadCompleted": "Download completed",
+	"templateDownloadFailed": "Download failed, please re-execute or feedback to",
+	"templateDownloadError": "Download error",
+	"extractErrorPath": "Extract path error",
+	"outro": "Next steps"
+}

@@ -1,0 +1,22 @@
+{
+	"projectNameInput": "请输入项目名称",
+	"projectNameCancelInput": "取消输入",
+	"projectNameErrorPath": "无效的目录路径",
+	"projectNameErrorName": "仅支持字母、数字、破折号或下划线输入有效的项目名称",
+	"projectNameErrorExists": "目标路径已存在，请重新输入",
+	"projectTemplateSelect": "请选择模板",
+	"projectNameCancelSelect": "取消选择",
+	"templateNormal": "默认 - Lithe Admin",
+	"templateNormalHint": "默认模板",
+	"templateLite": "精简 - Lithe Admin Lite",
+	"templateLiteHint": "不含路由页面，仅有基本的页面结构",
+	"templateLinkError": "未找到对应模板下载地址",
+	"templateDownloadStart": "开始下载",
+	"templateDownloadErrorTryAgain": "下载错误，正在重新尝试",
+	"templateDownloadErrorSwitchProxy": "下载错误，切换到其他地址",
+	"templateDownloadCompleted": "下载完成",
+	"templateDownloadFailed": "下载失败，请重新尝试或反馈到",
+	"templateDownloadError": "下载错误",
+	"extractErrorPath": "提取路径错误",
+	"outro": "后续步骤"
+}
