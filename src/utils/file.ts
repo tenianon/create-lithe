@@ -3,9 +3,13 @@ import { globby } from 'globby'
 import { readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
+function toPosix(posix: string) {
+	return posix.split(path.sep).join('/')
+}
+
 export async function deleteFile(filePaths: string[], outputDir: string) {
 	const fullPaths = filePaths.map((filePath) => {
-		return path.join(outputDir, filePath)
+		return toPosix(path.join(outputDir, filePath))
 	})
 
 	const matchedPaths = await globby(fullPaths, {
@@ -14,10 +18,15 @@ export async function deleteFile(filePaths: string[], outputDir: string) {
 		dot: true,
 	})
 
-	for (const matchedPath of matchedPaths) {
+	const directCandidates = filePaths.map((filePath) =>
+		path.join(outputDir, filePath),
+	)
+	const candidates = new Set<string>([...matchedPaths, ...directCandidates])
+
+	for (const p of candidates) {
 		try {
-			await rm(matchedPath, { recursive: true, force: true })
-		} catch (error) {}
+			await rm(p, { recursive: true, force: true })
+		} catch {}
 	}
 
 	return true
@@ -28,12 +37,13 @@ export async function modifyFile(
 	callback: (text: string) => string,
 	outputDir: string,
 ) {
-	const fullPath = path.join(outputDir, file)
-	const filePath = await globby(fullPath)
+	const joined = path.join(outputDir, file)
+	const pattern = toPosix(joined)
+	const filePath = await globby(pattern, { dot: true })
 
-	const text = await readFile(filePath[0], 'utf-8')
+	const target = filePath[0] || joined
 
+	const text = await readFile(target, 'utf-8')
 	const newText = callback(text)
-
-	await writeFile(filePath[0], newText)
+	await writeFile(target, newText)
 }
