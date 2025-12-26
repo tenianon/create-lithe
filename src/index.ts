@@ -241,7 +241,6 @@ async function bootstrap() {
 				'.deepsource.toml',
 				'vercel.json',
 				'LICENSE',
-				'pnpm-lock.yaml',
 			],
 			modifyFile: [
 				{
@@ -263,7 +262,6 @@ async function bootstrap() {
 				'.deepsource.toml',
 				'vercel.json',
 				'LICENSE',
-				'pnpm-lock.yaml',
 			],
 			modifyFile: [
 				{
@@ -319,7 +317,7 @@ async function bootstrap() {
 		`${language.outro}${projectName !== '.' ? `\n` : ''}
    ${chalk.hex('#ad46ff')(projectName !== '.' ? `cd ${projectName}` : '')}
    ${chalk.hex('#ad46ff')(`${getPackageManager()} install`)}
-   ${chalk.hex('#ad46ff')(`${getPackageManager()} run dev`)}
+   ${chalk.hex('#ad46ff')(`${getPackageManager()} dev`)}
   `,
 	)
 }
