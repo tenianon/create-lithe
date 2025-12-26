@@ -19,6 +19,11 @@ With Yarn:
 yarn create lithe@latest
 ```
 
+With Bun:
+```bash
+bun create lithe@latest
+```
+
 ### Templates
 
 - Lithe Admin
