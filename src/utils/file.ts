@@ -1,7 +1,6 @@
-import { rm } from 'fs/promises'
-import { globby } from 'globby'
-import { readFile, writeFile } from 'node:fs/promises'
+import { readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
+import { globby } from 'globby'
 
 function toPosix(posix: string) {
 	return posix.split(path.sep).join('/')

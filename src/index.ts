@@ -1,13 +1,12 @@
-import path from 'node:path'
-import * as prompts from '@clack/prompts'
-import { getLanguage } from './utils/getLocale'
-import chalk from 'chalk'
-
-import type { Option } from '@clack/prompts'
-import { mkdir } from 'node:fs/promises'
 import { createWriteStream, existsSync } from 'node:fs'
+import { mkdir } from 'node:fs/promises'
+import path from 'node:path'
+import type { Option } from '@clack/prompts'
+import * as prompts from '@clack/prompts'
+import chalk from 'chalk'
 import { Unzip, UnzipInflate } from 'fflate/node'
 import { deleteFile, modifyFile } from './utils/file'
+import { getLanguage } from './utils/getLocale'
 import { getPackageManager } from './utils/getPackageManager'
 import { sleep } from './utils/sleep'
 
@@ -237,11 +236,7 @@ async function bootstrap() {
 		{
 			value: 'default',
 			link: 'https://github.com/tenianon/lithe-admin/archive/refs/heads/main.zip',
-			deleteFile: [
-				'.deepsource.toml',
-				'vercel.json',
-				'LICENSE',
-			],
+			deleteFile: ['.deepsource.toml', 'vercel.json', 'LICENSE'],
 			modifyFile: [
 				{
 					path: 'package.json',
@@ -258,11 +253,7 @@ async function bootstrap() {
 		{
 			value: 'lite',
 			link: 'https://github.com/tenianon/lithe-admin/archive/refs/heads/lite.zip',
-			deleteFile: [
-				'.deepsource.toml',
-				'vercel.json',
-				'LICENSE',
-			],
+			deleteFile: ['.deepsource.toml', 'vercel.json', 'LICENSE'],
 			modifyFile: [
 				{
 					path: 'package.json',
