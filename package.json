@@ -19,7 +19,6 @@
 	"scripts": {
 		"dev": "bun build src/index.ts --outfile dist/index.mjs --watch",
 		"build": "bun build src/index.ts --outfile dist/index.mjs --target node --minify",
-		"prepublishOnly": "bun run build",
 		"biome:format": "biome format --write src",
 		"biome:check": "biome check --write src"
 	},
