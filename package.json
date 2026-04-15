@@ -33,7 +33,6 @@
 		"dist"
 	],
 	"devDependencies": {
-		"@biomejs/biome": "2.2.2",
 		"@clack/prompts": "^0.11.0",
 		"@types/node": "^24.3.0"
 	},

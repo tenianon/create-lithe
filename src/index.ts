@@ -236,7 +236,7 @@ async function bootstrap() {
 		{
 			value: 'default',
 			link: 'https://github.com/tenianon/lithe-admin/archive/refs/heads/main.zip',
-			deleteFile: ['.deepsource.toml', 'vercel.json', 'LICENSE'],
+			deleteFile: ['.deepsource.toml', 'vercel.json'],
 			modifyFile: [
 				{
 					path: 'package.json',
@@ -253,7 +253,7 @@ async function bootstrap() {
 		{
 			value: 'lite',
 			link: 'https://github.com/tenianon/lithe-admin/archive/refs/heads/lite.zip',
-			deleteFile: ['.deepsource.toml', 'vercel.json', 'LICENSE'],
+			deleteFile: ['.deepsource.toml', 'vercel.json'],
 			modifyFile: [
 				{
 					path: 'package.json',
